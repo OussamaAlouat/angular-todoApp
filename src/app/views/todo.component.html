@@ -6,7 +6,9 @@
 
   <div *ngIf="activities">
     <ul>
-      <li *ngFor="let act of activities">{{act}}</li>
+      <li *ngFor="let act of activities">
+        {{act.name}} -- {{act.date | date: 'dd/mm/yyyy HH:MM'}}
+      </li>
     </ul>
   </div>
 </div>
