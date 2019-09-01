@@ -6,7 +6,7 @@ import {Component} from '@angular/core';
 
 export class TodoComponent {
   public title: string;
-  public activities: Array<string>;
+  public activities: Array<any>;
   public activity: string;
 
   constructor() {
@@ -16,6 +16,11 @@ export class TodoComponent {
   }
 
   public addActivity() {
-    this.activities.push(this.activity);
+    const current = {
+      date: new Date(),
+      name: this.activity
+    }
+    this.activities.push(current);
+    this.activity = '';
   }
 }
