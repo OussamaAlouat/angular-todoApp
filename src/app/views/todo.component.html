@@ -1,0 +1,12 @@
+<div>
+  <h1>{{title}}</h1>
+  <input type="text" [(ngModel)]="activity">
+
+  <button (click)="addActivity()">Add</button>
+
+  <div *ngIf="activities">
+    <ul>
+      <li *ngFor="let act of activities">{{act}}</li>
+    </ul>
+  </div>
+</div>
