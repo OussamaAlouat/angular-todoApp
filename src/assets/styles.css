@@ -1,0 +1,16 @@
+.centered {
+  margin-left: 0;
+  margin-right: 0;
+  text-align: center;
+  justify-content: center;
+}
+
+.mt-3r{
+  margin-top: 3rem;
+}
+
+.todo-card {
+  background: #F4F5F5 !important;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}
