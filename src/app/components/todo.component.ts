@@ -23,12 +23,15 @@ export class TodoComponent {
     this.faCheck = faCheck;
     this.faTrash = faTrash;
     this.name = '';
-    console.log(this.activity)
   }
 
   public addActivity() {
     this.activity = new Activity(uuid(), this.name,new Date(), false);
     this.activities.push(this.activity);
     this.name = '';
+  }
+
+  removeActivity(activity) {
+    this.activities = this.activities.filter((val)=> val.id !== activity.id)
   }
 }
