@@ -27,10 +27,7 @@ export class TodoComponent {
   }
 
   public addActivity() {
-    this.activity.id = uuid();
-    this.activity.date = new Date();
-    this.activity.completed = false;
-    this.activity.name = this.name;
+    this.activity = new Activity(uuid(), this.name,new Date(), false);
     this.activities.push(this.activity);
     this.name = '';
   }
