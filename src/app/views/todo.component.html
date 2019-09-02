@@ -3,7 +3,7 @@
     <div class="title">
       <h1>{{title}}</h1>
     </div>
-    <input type="text" [(ngModel)]="activity"/>
+    <input type="text" [(ngModel)]="name"/>
     <button style="margin-left: 10px" class="btn btn-sm btn-primary" (click)="addActivity()">Add</button>
   </div>
 
@@ -13,6 +13,14 @@
         <div class="card-body">
             <h5>{{act.name}}</h5>
             <p>{{act.date | date: 'dd/mm/yyyy HH:MM'}}</p>
+            <div>
+              <button type="button" class="btn btn-primary">
+                <fa-icon [icon]="faCheck"></fa-icon>
+              </button>
+              <button type="button" class="btn btn-danger">
+                <fa-icon [icon]="faTrash"></fa-icon>
+              </button>
+            </div>
         </div>
       </div>
     </div>
