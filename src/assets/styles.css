@@ -14,3 +14,15 @@
   margin-left: 1rem;
   margin-bottom: 1rem;
 }
+
+.title{
+  margin-top: 2rem;
+  background: red;
+  border-radius: 10px 10px 10px 10px;
+  height: 60px;
+  line-height: 45px;
+  margin-bottom: 2rem;
+}
+.title h1{
+  line-height: 60px;
+}
