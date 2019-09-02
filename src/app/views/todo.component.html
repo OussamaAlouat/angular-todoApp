@@ -1,14 +1,18 @@
-<div>
-  <h1>{{title}}</h1>
-  <input type="text" [(ngModel)]="activity">
+<div class="container">
+  <div class="centered">
+      <h1>{{title}}</h1>
+    <input type="text" [(ngModel)]="activity"/>
+    <button style="margin-left: 10px" class="btn btn-sm btn-primary" (click)="addActivity()">Add</button>
+  </div>
 
-  <button (click)="addActivity()">Add</button>
-
-  <div *ngIf="activities">
-    <ul>
-      <li *ngFor="let act of activities">
-        {{act.name}} -- {{act.date | date: 'dd/mm/yyyy HH:MM'}}
-      </li>
-    </ul>
+  <div class="mt-3r" *ngIf="activities">
+    <div class="row">
+      <div class="col-lg-2 offset-1 todo-card card" *ngFor="let act of activities">
+        <div class="card-body">
+            <h5>{{act.name}}</h5>
+            <p>{{act.date | date: 'dd/mm/yyyy HH:MM'}}</p>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
