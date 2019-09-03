@@ -10,7 +10,7 @@
 }
 
 .todo-card {
-  background: #F4F5F5 !important;
+  border-radius: 30px !important;
   margin-left: 1rem;
   margin-bottom: 1rem;
 }
@@ -25,4 +25,18 @@
 }
 .title h1{
   line-height: 60px;
+}
+.completed {
+  background: green !important;
+}
+
+.notCompleted {
+  background: #F4F5F5 !important;
+}
+.card-btn{
+  margin-right:10px;
+}
+
+.buttons {
+  text-align: center;
 }
