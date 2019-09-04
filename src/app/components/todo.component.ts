@@ -34,4 +34,14 @@ export class TodoComponent {
   removeActivity(activity) {
     this.activities = this.activities.filter((val)=> val.id !== activity.id)
   }
+
+  changeActivityStatus(activity) {
+    this.activities = this.activities.map((val) => {
+      if (activity.id === val.id ) {
+        val.completed = !activity.completed;
+      }
+
+      return val;
+    })
+  }
 }

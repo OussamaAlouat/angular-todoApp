@@ -9,12 +9,18 @@
 
   <div class="mt-3r" *ngIf="activities">
     <div class="row">
-      <div class="col-lg-2 offset-1 todo-card card" *ngFor="let act of activities">
+      <div [ngClass]="{ 'completed' : act.completed,
+                                                                 'notCompleted': !act.completed,
+                                                                 'col-lg-2': 1,
+                                                                 'offset-1': 1,
+                                                                 'todo-card': 1,
+                                                                 'card':1}"
+           *ngFor="let act of activities">
         <div class="card-body">
             <h5>{{act.name}}</h5>
             <p>{{act.date | date: 'dd/mm/yyyy HH:MM'}}</p>
-            <div>
-              <button type="button" class="btn btn-primary">
+            <div class="buttons">
+              <button type="button" class="btn btn-primary card-btn" (click)="changeActivityStatus(act)">
                 <fa-icon [icon]="faCheck"></fa-icon>
               </button>
               <button type="button" class="btn btn-danger" (click)="removeActivity(act)">
