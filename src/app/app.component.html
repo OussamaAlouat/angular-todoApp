@@ -1,3 +1,19 @@
-<div>
-  <todo></todo>
+<!--The content below is only a placeholder and can be replaced.-->
+<div id="content" class="col-lg-10 offset-1">
+  <header id="header" class="col-lg-12" [style.background] = "'red'">
+    <h1>
+      {{title}}
+    </h1>
+  </header>
+  
+  <nav id="nav" class="col-lg-12">
+    <ul>
+      <li><a [routerLink]="['/home']" [routerLinkActive]="['activado']">Home</a></li>
+      <li><a [routerLink]="['/todo-list']" [routerLinkActive]="['activado']">Lista de tareas</a></li>
+    </ul>
+  </nav>
+
+  <section id="main" class="col-lg-12">
+    <router-outlet></router-outlet>
+  </section>
 </div>
