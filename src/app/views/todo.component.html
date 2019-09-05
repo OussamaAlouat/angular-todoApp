@@ -1,12 +1,4 @@
 <div class="container">
-  <div class="centered">
-    <div class="title">
-      <h1>{{title}}</h1>
-    </div>
-    <input type="text" [(ngModel)]="name"/>
-    <button style="margin-left: 10px" class="btn btn-sm btn-primary" (click)="addActivity()">Add</button>
-  </div>
-
   <div class="mt-3r" *ngIf="activities">
     <div class="row">
       <div [ngClass]="{ 'completed' : act.completed,
@@ -20,10 +12,10 @@
             <h5>{{act.name}}</h5>
             <p>{{act.date | date: 'dd/mm/yyyy HH:MM'}}</p>
             <div class="buttons">
-              <button type="button" class="btn btn-primary card-btn" (click)="changeActivityStatus(act)">
+              <button type="button" class="btn btn-primary btn-sm card-btn" (click)="changeActivityStatus(act)">
                 <fa-icon [icon]="faCheck"></fa-icon>
               </button>
-              <button type="button" class="btn btn-danger" (click)="removeActivity(act)">
+              <button type="button" class="btn btn-danger btn-sm" (click)="removeActivity(act)">
                 <fa-icon [icon]="faTrash"></fa-icon>
               </button>
             </div>

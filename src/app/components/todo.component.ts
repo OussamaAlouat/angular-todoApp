@@ -1,38 +1,33 @@
 import {Component} from '@angular/core';
 import { faTrash, faCheck } from '@fortawesome/free-solid-svg-icons';
 import { v4 as uuid } from 'uuid';
+import { TodoService } from '../services/todo.service';
 
 import { Activity } from '../models/activity';
 @Component({
   selector: 'todo',
-  templateUrl: '../views/todo.component.html'
+  templateUrl: '../views/todo.component.html',
+  providers: [TodoService]
 })
 
 export class TodoComponent {
   public title: string;
   public activities: Array<Activity>;
-  public activity: Activity;
   public faTrash;
   public faCheck;
-  public name: string;
 
-  constructor() {
+  constructor(
+    private _todoService: TodoService
+  ) {
     this.title = 'TODO APP';
     this.activities = [];
-    this.activity = new Activity('', '', new Date(), false);
     this.faCheck = faCheck;
     this.faTrash = faTrash;
-    this.name = '';
-  }
-
-  public addActivity() {
-    this.activity = new Activity(uuid(), this.name,new Date(), false);
-    this.activities.push(this.activity);
-    this.name = '';
   }
 
   removeActivity(activity) {
     this.activities = this.activities.filter((val)=> val.id !== activity.id)
+    this._todoService.uploadActivities(this.activities);
   }
 
   changeActivityStatus(activity) {
@@ -42,6 +37,16 @@ export class TodoComponent {
       }
 
       return val;
-    })
+    });
+
+    this._todoService.uploadActivities(this.activities);
+  }
+
+  ngOnInit() {
+    this.loadActivities();
+  }
+
+  loadActivities() {
+    this.activities= this._todoService.getActivities();
   }
 }
