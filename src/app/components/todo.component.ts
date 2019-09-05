@@ -15,6 +15,8 @@ export class TodoComponent {
   public activities: Array<Activity>;
   public faTrash;
   public faCheck;
+  public countActivities:number;
+  public numberOfCompleted: number;
 
   constructor(
     private _todoService: TodoService
@@ -28,6 +30,8 @@ export class TodoComponent {
   removeActivity(activity) {
     this.activities = this.activities.filter((val)=> val.id !== activity.id)
     this._todoService.uploadActivities(this.activities);
+    this.countActivities = this.activities.length;
+    this.numberOfCompleted = this.getCompletedActivities();
   }
 
   changeActivityStatus(activity) {
@@ -40,6 +44,7 @@ export class TodoComponent {
     });
 
     this._todoService.uploadActivities(this.activities);
+    this.numberOfCompleted = this.getCompletedActivities();
   }
 
   ngOnInit() {
@@ -48,5 +53,13 @@ export class TodoComponent {
 
   loadActivities() {
     this.activities= this._todoService.getActivities();
+    this.countActivities = this.activities.length;
+    this.getCompletedActivities();
+    this.numberOfCompleted = this.getCompletedActivities();
+  }
+
+  getCompletedActivities() {
+    const count = this.activities.filter((val) => val.completed).length;
+    return count;
   }
 }

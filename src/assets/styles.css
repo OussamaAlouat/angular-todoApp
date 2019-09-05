@@ -18,6 +18,10 @@
   margin-top: 3rem;
 }
 
+.mb-2r{
+  margin-bottom: 2rem !important;
+}
+
 .todo-card {
   border-radius: 30px !important;
   margin-left: 1rem;
@@ -55,12 +59,11 @@
   color: white;
   margin: 0px;
   height: 90px;
-  line-height: 90px;
 }
 
 #header h1 {
   display: block;
-  line-height: 50px;
+  line-height: 90px;
   font-weight: bold;
   font-size: 30px;
 }
@@ -108,4 +111,15 @@
   padding: 50px;
   margin-top: 30px;
   border-radius: 5px;
+}
+
+#form-producto label{
+  margin-top: 10px;
+}
+
+.counter-div{
+  background: #ff3001;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
 }
