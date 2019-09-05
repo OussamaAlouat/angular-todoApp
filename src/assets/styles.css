@@ -21,6 +21,7 @@
 .mb-2r{
   margin-bottom: 2rem !important;
 }
+
 .todo-card {
   border-radius: 30px !important;
   margin-left: 1rem;
@@ -111,4 +112,14 @@
   padding: 50px;
   margin-top: 30px;
   border-radius: 5px;
+}
+
+#form-producto label{
+  margin-top: 10px;
+}
+
+.counter-div{
+  background: red;
+  border-radius: 10px;
+  text-align: center;
 }
