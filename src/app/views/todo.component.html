@@ -1,4 +1,5 @@
 <div class="container">
+  
   <div class="mt-3r" *ngIf="activities">
     <div class="row">
       <div [ngClass]="{ 'completed' : act.completed,
@@ -23,6 +24,11 @@
       </div>
     </div>
   </div>
+
+  <div *ngIf="!activities || !activities.length" class="alert alert-dark" role="alert">
+    No existen tareas, todavía no se ha creado ninguna.
+  </div>
+
   <div class="mt-3r counter-div">
     <p>
       <span >
