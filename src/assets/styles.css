@@ -18,6 +18,9 @@
   margin-top: 3rem;
 }
 
+.mb-2r{
+  margin-bottom: 2rem !important;
+}
 .todo-card {
   border-radius: 30px !important;
   margin-left: 1rem;
