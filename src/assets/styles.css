@@ -59,12 +59,11 @@
   color: white;
   margin: 0px;
   height: 90px;
-  line-height: 90px;
 }
 
 #header h1 {
   display: block;
-  line-height: 50px;
+  line-height: 90px;
   font-weight: bold;
   font-size: 30px;
 }
@@ -119,7 +118,8 @@
 }
 
 .counter-div{
-  background: red;
+  background: #ff3001;
   border-radius: 10px;
   text-align: center;
+  color: white;
 }
