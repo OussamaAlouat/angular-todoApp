@@ -6,9 +6,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { routing, appRoutingProviders } from './app.routing';
 
 import { AppComponent } from './app.component';
-import { TodoComponent } from './components/todo.component';
-import { HomeComponent } from './components/home.component';
-import { AddComponent } from './components/add.component';
+import { TodoComponent } from './todo/todo.component';
+import { HomeComponent } from './home/home.component';
+import { AddComponent } from './add/add.component';
 @NgModule({
   declarations: [
     AppComponent,
