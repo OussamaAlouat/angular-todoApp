@@ -6,7 +6,7 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 
 @Component({
   selector: 'add-component',
-  templateUrl: '../views/add.component.html',
+  templateUrl: './add.component.html',
   providers: [TodoService]
 })
 export class AddComponent {

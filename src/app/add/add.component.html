@@ -5,13 +5,13 @@
           <span *ngIf="!name.valid && name.touched" class="label label-danger">El nombre es obligatorio</span>
         </label>
         <input type="text"  #name="ngModel" name="name" [(ngModel)]="activity.name" class="form-control" required/>
-      
+
         <label>
           Descripción
           <span *ngIf="!descripcion.valid && descripcion.touched" class="label label-danger">La descripcion es obligatorio</span>
         </label>
         <textarea #descripcion="ngModel" name="descripcion" [(ngModel)]="activity.description" type="text" class="form-control" required></textarea>
-      
+
         <label>
           Fecha
           <span *ngIf="!fecha.valid && fecha.touched" class="label label-danger">La fecha es erronea</span>

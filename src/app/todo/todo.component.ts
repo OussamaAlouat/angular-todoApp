@@ -6,7 +6,7 @@ import { TodoService } from '../services/todo.service';
 import { Activity } from '../models/activity';
 @Component({
   selector: 'todo',
-  templateUrl: '../views/todo.component.html',
+  templateUrl: './todo.component.html',
   providers: [TodoService]
 })
 

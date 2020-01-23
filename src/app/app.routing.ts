@@ -1,9 +1,9 @@
 import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { HomeComponent } from './components/home.component';
-import { TodoComponent } from './components/todo.component';
-import { AddComponent } from './components/add.component'
+import { HomeComponent } from './home/home.component';
+import { TodoComponent } from './todo/todo.component';
+import { AddComponent } from './add/add.component'
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent},
